@@ -20,8 +20,8 @@ with c1:
 with c2:
     st.markdown(
         "<h1 style='text-align:center;'>KHOA HỌC MÀU SẮC</h1>"
-        "<h4 style='text-align:center;'>Ứng dụng Python (Streamlit + colour-science) trong công nghệ in</h4>"
-        "<p style='text-align:center;'>Trường Đại học Sư phạm Kỹ thuật TP.HCM (HCM-UTE) – Khoa In và Truyền thông</p>",
+        "<h4 style='text-align:center;'>Ứng dụng Matlab trong công nghệ in</h4>"
+        "<p style='text-align:center;'>Trường Đại học Công Nghệ Kỹ thuật TP.HCM – Khoa In và Truyền thông</p>",
         unsafe_allow_html=True,
     )
 with c3:
@@ -39,11 +39,11 @@ st.markdown(
 | 4 | Gamut màu của thiết bị RGB |
 | 5 | Gamut màu của máy in từ file gamut |
 | 6 | Đặc tính hoá máy in nửa tông |
-| 7 | **Biểu đồ CIE dạng band (400–700 nm)** |
-| 8 | **Biểu đồ CIELab: so sánh Lab1 → Lab2, ΔE và nhận xét** |
-| 9 | **So sánh gamut: sRGB, Adobe RGB, DCI-P3, Rec.2020, máy in** |
+| 7 | **Kiểm tra sai lệch màu Delta E** |
+| 8 | **Chuyển đổi đa không gian màu** |
+| 9 | **Phổ phản xạ dưới nhiều nguồn sáng** |
 
 Chọn từng trang ở thanh bên trái.
 """
 )
-st.caption("Sinh viên thực hiện: Hà Đăng Hữu – MSSV 23458008")
+st.caption("Sinh viên thực hiện: Huỳnh Thị Thúy Hằng – MSSV 23458001")
