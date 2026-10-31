@@ -1,0 +1,49 @@
+import os
+import streamlit as st
+
+st.set_page_config(page_title="Khoa học màu sắc", page_icon="🎨", layout="wide")
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+
+def show_logo(filename, caption):
+    path = os.path.join(BASE, "assets", filename)
+    if os.path.exists(path):
+        st.image(path, width=160)
+    else:
+        st.info(f"Chưa có {filename} trong thư mục assets/")
+
+
+c1, c2, c3 = st.columns([1, 4, 1])
+with c1:
+    show_logo("logo_truong.png", "Logo trường")
+with c2:
+    st.markdown(
+        "<h1 style='text-align:center;'>KHOA HỌC MÀU SẮC</h1>"
+        "<h4 style='text-align:center;'>Ứng dụng Python (Streamlit + colour-science) trong công nghệ in</h4>"
+        "<p style='text-align:center;'>Trường Đại học Sư phạm Kỹ thuật TP.HCM (HCM-UTE) – Khoa In và Truyền thông</p>",
+        unsafe_allow_html=True,
+    )
+with c3:
+    show_logo("logo_khoa.png", "Logo khoa")
+
+st.divider()
+st.markdown(
+    """
+### Nội dung trang web
+| STT | Nội dung |
+|---|---|
+| 1 | Chuyển đổi không gian màu sRGB ⇄ XYZ |
+| 2 | Tính giá trị X, Y, Z từ file phổ đo |
+| 3 | Biểu đồ CIE 1931 hình móng ngựa |
+| 4 | Gamut màu của thiết bị RGB |
+| 5 | Gamut màu của máy in từ file gamut |
+| 6 | Đặc tính hoá máy in nửa tông |
+| 7 | **Biểu đồ CIE dạng band (400–700 nm)** |
+| 8 | **Biểu đồ CIELab: so sánh Lab1 → Lab2, ΔE và nhận xét** |
+| 9 | **So sánh gamut: sRGB, Adobe RGB, DCI-P3, Rec.2020, máy in** |
+
+Chọn từng trang ở thanh bên trái.
+"""
+)
+st.caption("Sinh viên thực hiện: Hà Đăng Hữu – MSSV 23458008")
